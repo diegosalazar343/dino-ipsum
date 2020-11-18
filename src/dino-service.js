@@ -1,9 +1,9 @@
 export default class DinoService {
 
-  static dinoIpsum(keyword) {
+  static dinoIpsum() {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      const urls = `http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=1&words=15`;
+      const url = `http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=1&words=15`;
       request.onload = function() {
         if(this.status === 200) {
           resolve(request.response);
